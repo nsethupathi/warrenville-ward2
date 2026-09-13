@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nivethan Sethupathi for Warrenville Ward 2</title>
+<style>
+  :root{
+    --black:#0b0f0c;
+    --black-soft:#151c17;
+    --green:#2fae4e;
+    --green-dark:#1f7a37;
+    --green-bright:#4bd66e;
+    --cream:#f4f6f2;
+    --gray:#9aa79e;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    background:var(--cream);
+    color:var(--black);
+    line-height:1.5;
+  }
+  a{color:inherit;}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px;}
+
+  /* NAV */
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:var(--black);
+    border-bottom:1px solid rgba(75,214,110,0.25);
+  }
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;}
+  nav .brand{color:var(--cream);font-weight:700;font-size:15px;letter-spacing:0.02em;}
+  nav .brand span{color:var(--green-bright);}
+  nav ul{list-style:none;display:flex;gap:22px;}
+  nav a{color:var(--gray);text-decoration:none;font-size:13px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;transition:color .15s;}
+  nav a:hover{color:var(--green-bright);}
+  nav .cta{
+    background:var(--green);color:var(--black);padding:8px 16px;border-radius:5px;
+    font-weight:700;
+  }
+  nav .cta:hover{background:var(--green-bright);}
+
+  /* HERO */
+  .hero{
+    background:var(--black);
+    color:var(--cream);
+  }
+  .hero-banner{
+    width:100%;
+    height:clamp(220px,34vw,420px);
+    overflow:hidden;
+    border-bottom:2px solid var(--green);
+  }
+  .hero-banner img{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:50% 18%;
+  }
+  .hero-text{
+    max-width:640px;
+    margin:0 auto;
+    padding:40px 24px 56px;
+    text-align:center;
+  }
+  .hero-text .eyebrow{
+    display:inline-block;
+    color:var(--green-bright);
+    font-weight:700;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    font-size:12px;
+    border:1px solid rgba(75,214,110,0.5);
+    border-radius:20px;
+    padding:5px 14px;
+    margin-bottom:18px;
+  }
+  .hero-text h1{
+    font-size:clamp(32px,5vw,48px);
+    font-weight:800;
+    line-height:1.08;
+    margin-bottom:14px;
+    letter-spacing:-0.01em;
+  }
+  .hero-text h1 em{
+    font-style:normal;
+    color:var(--green-bright);
+  }
+  .hero-text p.sub{
+    max-width:480px;
+    margin:0 auto 26px;
+    color:#d7ded9;
+    font-size:17px;
+  }
+  .hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;padding:12px 24px;border-radius:6px;font-weight:700;font-size:14px;
+    text-decoration:none;letter-spacing:0.02em;
+    transition:transform .12s ease, background .15s ease;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn-primary{background:var(--green);color:var(--black);}
+  .btn-primary:hover{background:var(--green-bright);}
+  .btn-outline{border:1px solid var(--gray);color:var(--cream);}
+  .btn-outline:hover{border-color:var(--green-bright);color:var(--green-bright);}
+
+  /* SECTION HEADINGS */
+  .section{padding:52px 0;}
+  .section-alt{background:var(--black-soft);color:var(--cream);}
+  .kicker{
+    color:var(--green-dark);
+    font-weight:700;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    font-size:12px;
+    margin-bottom:8px;
+  }
+  .section-alt .kicker{color:var(--green-bright);}
+  h2{font-size:clamp(24px,3.2vw,32px);font-weight:800;margin-bottom:8px;letter-spacing:-0.01em;}
+  .section > .wrap > p.lead{color:#4a544c;max-width:640px;margin-bottom:28px;}
+  .section-alt p.lead{color:#c3ccc5;}
+
+  /* ISSUES */
+  .issues{display:grid;grid-template-columns:1fr;gap:20px;}
+  @media(min-width:720px){.issues{grid-template-columns:1fr 1fr;}}
+  .issue-card{
+    background:#fff;
+    border:1px solid #e1e6de;
+    border-left:4px solid var(--green);
+    border-radius:8px;
+    padding:24px;
+  }
+  .issue-card h3{font-size:19px;font-weight:800;margin-bottom:10px;}
+  .issue-card p{color:#414b44;font-size:14.5px;margin-bottom:10px;}
+  .stat-row{
+    display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;
+  }
+  .stat{
+    background:var(--black);color:var(--cream);
+    border-radius:6px;padding:10px 14px;flex:1;min-width:120px;text-align:center;
+  }
+  .stat .num{color:var(--green-bright);font-size:22px;font-weight:800;display:block;line-height:1.1;}
+  .stat .label{font-size:11px;color:var(--gray);text-transform:uppercase;letter-spacing:0.04em;}
+
+  /* ABOUT / GET INVOLVED */
+  .involve-grid{display:grid;grid-template-columns:1fr;gap:16px;}
+  @media(min-width:720px){.involve-grid{grid-template-columns:repeat(3,1fr);}}
+  .involve-card{
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(75,214,110,0.25);
+    border-radius:8px;
+    padding:20px;
+  }
+  .involve-card h4{color:var(--green-bright);font-size:15px;font-weight:700;margin-bottom:6px;}
+  .involve-card p{font-size:13.5px;color:#c3ccc5;}
+
+  /* FOOTER / CONTACT */
+  footer{
+    background:var(--black);color:var(--gray);
+    padding:32px 0;text-align:center;font-size:13px;
+    border-top:1px solid rgba(75,214,110,0.15);
+  }
+  footer .fname{color:var(--cream);font-weight:700;margin-bottom:4px;}
+  footer a.email{color:var(--green-bright);text-decoration:none;font-weight:600;}
+  footer .disclaimer{margin-top:14px;color:#5b665f;font-size:11.5px;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">NIVETHAN <span>SETHUPATHI</span></div>
+    <ul>
+      <li><a href="#issues">Issues</a></li>
+      <li><a href="#involved">Get Involved</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-banner">
+    <img src="images/niv-hero.jpg" alt="Nivethan Sethupathi">
+  </div>
+  <div class="hero-text">
+    <span class="eyebrow">Warrenville · Ward 2 · City Council</span>
+    <h1>Nivethan Sethupathi <em>for Ward 2</em></h1>
+    <p class="sub">Warrenville deserves a council that actually listens. I'm running to remove the Flock surveillance cameras and to finally tackle our brutally hard water.</p>
+    <div class="hero-btns">
+      <a class="btn btn-primary" href="#involved">Get Involved</a>
+      <a class="btn btn-outline" href="#issues">See the Issues</a>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="issues">
+  <div class="wrap">
+    <div class="kicker">Where I Stand</div>
+    <h2>The Issues That Brought Me In</h2>
+    <p class="lead">Two problems residents raise again and again.</p>
+
+    <div class="issues">
+      <div class="issue-card">
+        <h3>Remove the Flock Cameras</h3>
+        <p>Warrenville residents have repeatedly asked the council to remove the Flock license-plate cameras installed around our neighborhoods. That request has gone unanswered. I'll push to take them down and put decisions like this back in residents' hands, not on autopilot.</p>
+      </div>
+
+      <div class="issue-card">
+        <h3>Fix Our Water Hardness</h3>
+        <p>Warrenville's water tests at 24–26 grains per gallon of hardness — more than double the 10.5-grain threshold that defines "very hard" water. That means more scale buildup and shorter-lived appliances. I'll push the city to explore central softening so residents aren't left to solve it individually.</p>
+        <div class="stat-row">
+          <div class="stat"><span class="num">24–26 grains</span><span class="label">Warrenville's Current Hardness</span></div>
+          <div class="stat"><span class="num">10.5+ grains</span><span class="label">Where "Very Hard" Starts</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="involved">
+  <div class="wrap">
+    <div class="kicker">Take Action</div>
+    <h2>Get Involved</h2>
+    <p class="lead">Ward 2 wins this by showing up. Here's how to help.</p>
+    <div class="involve-grid">
+      <div class="involve-card">
+        <h4>Talk to Your Neighbors</h4>
+        <p>Let people on your street know a candidate is actually listening on Flock cameras and water quality.</p>
+      </div>
+      <div class="involve-card">
+        <h4>Volunteer</h4>
+        <p>Help with canvassing, yard signs, or a few hours at a community event before election day.</p>
+      </div>
+      <div class="involve-card">
+        <h4>Show Up to Vote</h4>
+        <p>Make sure you're registered at your current Ward 2 address and have a plan to vote.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="fname">Nivethan Sethupathi for Warrenville Ward 2</div>
+    <p>Questions or want to volunteer? <a class="email" href="mailto:nivethan.sethupathi@gmail.com">nivethan.sethupathi@gmail.com</a></p>
+    <div class="disclaimer">Paid for by Nivethan Sethupathi for Ward 2.</div>
+  </div>
+</footer>
+
+</body>
+</html>

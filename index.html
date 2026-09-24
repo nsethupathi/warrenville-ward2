@@ -132,6 +132,7 @@
   /* ISSUES */
   .issues{display:grid;grid-template-columns:1fr;gap:20px;}
   @media(min-width:720px){.issues{grid-template-columns:1fr 1fr;}}
+  @media(min-width:960px){.issues{grid-template-columns:repeat(3,1fr);}}
   .issue-card{
     background:#fff;
     border:1px solid #e1e6de;
@@ -151,7 +152,12 @@
   .stat .num{color:var(--green-bright);font-size:22px;font-weight:800;display:block;line-height:1.1;}
   .stat .label{font-size:11px;color:var(--gray);text-transform:uppercase;letter-spacing:0.04em;}
 
-  /* ABOUT / GET INVOLVED */
+  /* ABOUT */
+  .about{background:#e6ece2;}
+  .about-inner p{color:#414b44;font-size:15.5px;margin-bottom:12px;max-width:720px;}
+  .about-inner p:last-child{margin-bottom:0;}
+
+  /* GET INVOLVED */
   .involve-grid{display:grid;grid-template-columns:1fr;gap:16px;}
   @media(min-width:720px){.involve-grid{grid-template-columns:repeat(3,1fr);}}
   .involve-card{
@@ -206,12 +212,12 @@
   <div class="wrap">
     <div class="kicker">Where I Stand</div>
     <h2>The Issues That Brought Me In</h2>
-    <p class="lead">Two problems residents raise again and again.</p>
+    <p class="lead">Three priorities I'll bring to city council.</p>
 
     <div class="issues">
       <div class="issue-card">
         <h3>Remove the Flock Cameras</h3>
-        <p>Warrenville residents have repeatedly asked the council to remove the Flock license-plate cameras installed around our neighborhoods. That request has gone unanswered. I'll push to take them down and put decisions like this back in residents' hands, not on autopilot.</p>
+        <p>Warrenville residents have repeatedly asked the council to remove the Flock license-plate cameras installed around our neighborhoods. That request has gone unanswered. I'll push to take them down and put decisions like this back in residents' hands.</p>
       </div>
 
       <div class="issue-card">
@@ -222,7 +228,21 @@
           <div class="stat"><span class="num">10.5+ grains</span><span class="label">Where "Very Hard" Starts</span></div>
         </div>
       </div>
+
+      <div class="issue-card">
+        <h3>Let Residents Shape the Budget</h3>
+        <p>Residents should have a direct say in how the city spends their money. As a software engineer, I want to build technology that supports participatory budgeting — letting residents propose, discuss, and vote on how city funds are spent.</p>
+      </div>
     </div>
+  </div>
+</section>
+
+<section class="section about" id="about">
+  <div class="wrap about-inner">
+    <div class="kicker">Who I Am</div>
+    <h2>About Me</h2>
+    <p>My name is Nivethan Sethupathi and I'm hoping to represent Warrenville's Ward 2. I'm originally from down the road in Wheaton, lived in Chicago for nine years, and moved to Warrenville in 2021. I'm currently a software engineer, but I also worked as a social worker in Chicago during my previous career.</p>
+    <p>I'm all about community participation in local politics. It would be an honor to represent you!</p>
   </div>
 </section>
 
@@ -252,7 +272,7 @@
   <div class="wrap">
     <div class="fname">Nivethan Sethupathi for Alderperson</div>
     <p>Questions or want to volunteer? <a class="email" href="mailto:nivethan.sethupathi@gmail.com">nivethan.sethupathi@gmail.com</a></p>
-    <div class="disclaimer">Friends for Nivethan Sethupathi</div>
+    <div class="disclaimer">Paid for by Friends for Nivethan Sethupathi</div>
   </div>
 </footer>
 
